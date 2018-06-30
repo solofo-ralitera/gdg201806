@@ -153,6 +153,11 @@ firebase.database()
     .on('value', function(snapshot) {
         updateScores(snapshot.val(), '#top-score');
     });
+    firebase.database()
+    .ref('best')
+    .on('value', function(snapshot) {
+        updateScores(snapshot.val(), '#best-score');
+    });    
 function updateScores(scores, div) {
     if(gameStarted) return false;
     let str = '';
