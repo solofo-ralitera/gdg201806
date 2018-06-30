@@ -10,7 +10,7 @@
       <h1>Hello from GDG</h1>
       <section>
         
-        <fieldset id="login-container">
+        <fieldset id="login-container" style="display:none;">
           <legend>Login</legend>
           <div>
             <input type="text" name="username" id="username" placeholder="Identifiant" />
@@ -19,7 +19,41 @@
           </div>
         </fieldset>
 
-      </section>
+        <section id="game-container" style="display:none;">
+          <header class="align-right">
+            <a href="#" id="logout">Logout</a>
+          </header>
+          <div class="game">
+            <div class="light-container">
+              <div class="light">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="light">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="light">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="light">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div id="score">&nbsp;</div>
+          </div>
+
+        </section>
+        <fieldset>
+          <legend>Top score</legend>
+          <div id="top-score"></div>
+        </fieldset>
       <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
       <script src="js/app.js"></script>
       <link rel="stylesheet" href="css/app.css" />

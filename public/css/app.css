@@ -1,0 +1,25 @@
+.game {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.light-container {
+    white-space: nowrap;
+}
+.light-container > .light {
+    background-color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: inline-block;
+}
+.light-container > .light > div {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: grey;
+    margin: 5px;
+}
+.light-container > .light.active > div {
+    background-color: #ff2800;
+}
