@@ -1,3 +1,4 @@
+(function() {
 let connectedUser = null;
 
 // Initialize Firebase
@@ -52,6 +53,15 @@ document.querySelector('#login').addEventListener('click', function(evt) {
 });
 document.querySelector('#logout').addEventListener('click', function(evt) {
     firebase.auth().signOut();
+});
+document.querySelector('#login-google').addEventListener('click', function(evt) {
+    // Using a popup.
+    const provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('profile');
+    provider.addScope('email');
+    firebase.auth().signInWithPopup(provider).then(function(result) {
+        // console.log(result);
+    });
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -173,3 +183,4 @@ function updateScores(scores, div) {
     }
     document.querySelector(div).innerHTML = str;
 }
+})();
